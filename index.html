@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row custom-row align-items-center justify-content-center">
+            <form name="form" id="myForm" class="bg-white col-4">
+                <div class="row">
+                    <div class="display">
+                        <input type="text" placeholder="0" name="displayResult" id="displayResult" class="h-100 w-100 rounded-top border-0">
+                    </div>
+                    <div class="row my-2">
+                        <div class="d-flex">
+                            <input type="button" value="C" class="bg-danger text-white" onclick="reset()">
+                            <p>JavaScript Calculator</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div>
+                        <input type="button" name="b7" value="7" onclick="addToCalculator(b7.value)">
+                        <input type="button" name="b8" value="8" onclick="addToCalculator(b8.value)">
+                        <input type="button" name="b9" value="9" onclick="addToCalculator(b9.value)">
+                        <input type="button" name="addb" value="+" onclick="addToCalculator(addb.value)">
+                        <input type="button" name="abs" value="|x|" onclick="mathCalculator('abs')">
+                        <input type="button" name="ceil" value="ce" onclick="mathCalculator('ceil')">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                     <div>
+                        <input type="button" name="b4" value="4" onclick="addToCalculator(b4.value)">
+                        <input type="button" name="b5" value="5" onclick="addToCalculator(b5.value)">
+                        <input type="button" name="b6" value="6" onclick="addToCalculator(b6.value)">
+                        <input type="button" name="subb" value="-" onclick="addToCalculator(subb.value)">
+                        <input type="button" name="sqrt" value="&radic;" onclick="mathCalculator('sqrt')">
+                        <input type="button" name="floor" value="fl" onclick="mathCalculator('floor')">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div>
+                        <input type="button" name="b1" value="1" onclick="addToCalculator(b1.value)">
+                        <input type="button" name="b2" value="2" onclick="addToCalculator(b2.value)">
+                        <input type="button" name="b3" value="3" onclick="addToCalculator(b3.value)">
+                        <input type="button" name="mulb" value="*" onclick="addToCalculator(mulb.value)">
+                        <input type="button" name="round" value="r" onclick="mathCalculator('round')">
+                        <input type="button" name="pow" value="^" onclick="mathCalculator('pow')">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div>
+                        <input type="button" name="b0" value="0" onclick="addToCalculator(b0.value)">
+                        <input type="button" name="b00" value="00" onclick="addToCalculator(b00.value)">
+                        <input type="button" name="potb" value="." onclick="addToCalculator(potb.value)">
+                        <input type="button" name="divb" value="/" onclick="addToCalculator(divb.value)">
+                        <input type="button" class="bg-warning  text-white btnEquel" value="=" onclick="finalize()">
+                    </div>
+                </div>
+             </form>   
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
